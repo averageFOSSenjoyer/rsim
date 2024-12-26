@@ -1,0 +1,32 @@
+[workspace]
+members = [
+    "core",
+    "macro",
+    "rv32i",
+    "unicore"
+]
+resolver = "2"
+
+[profile.dev]
+opt-level = 0
+debug = "full"
+strip = "none"
+lto = false
+panic = "unwind"
+incremental = true
+overflow-checks = false
+
+[profile.test]
+opt-level = 0
+debug = "full"
+strip = "none"
+lto = false
+incremental = true
+overflow-checks = false
+
+[profile.release]
+opt-level = 3
+debug = 0
+strip = "debuginfo"
+lto = true
+incremental = true

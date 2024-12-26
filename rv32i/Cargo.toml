@@ -1,0 +1,16 @@
+[package]
+name = "rsim_rv32i"
+version = "1.0.0-alpha.1"
+edition = "2021"
+
+[dependencies]
+rsim_core = { path = "../core" }
+rsim_macro = { path = "../macro" }
+crossbeam-channel = "=0.5.14"
+strum = {version = "=0.25.0", features = ["derive"] }
+
+[dev-dependencies]
+rand = "=0.8.1"
+
+[lints.clippy]
+too_many_arguments = "allow"

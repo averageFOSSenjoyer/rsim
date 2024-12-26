@@ -1,0 +1,9 @@
+[package]
+name = "unicore"
+version = "1.0.0-alpha.1"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+rand = "=0.8.1"

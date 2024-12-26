@@ -1,0 +1,40 @@
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash)]
+pub enum States {
+    Fetch1,
+    Fetch2,
+    Fetch3,
+    Decode,
+    Imm,
+    Lui,
+    Br,
+    Auipc,
+    AddrCalc,
+    Load1,
+    Load2,
+    Store1,
+    Store2,
+    Jal,
+    Jalr,
+    Reg,
+}
+
+#[derive(Debug, Eq, Hash, PartialEq)]
+pub enum ControlSignals {
+    LoadMar,
+    LoadMdr,
+    LoadPc,
+    LoadIr,
+    LoadRegfile,
+    LoadDataOut,
+    PcMuxSel,
+    CmpOp,
+    AluMux1Sel,
+    AluMux2Sel,
+    RegfileMuxSel,
+    MarMuxSel,
+    CmpMuxSel,
+    AluOp,
+    MemRead,
+    MemWrite,
+    MemByteEnable,
+}
